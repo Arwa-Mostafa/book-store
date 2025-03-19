@@ -1,0 +1,73 @@
+body{
+  background-color: #d6d4d1;
+}
+.container{
+  width: 80%;
+}
+.loading-indicator {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 50px;
+  }
+  #header {
+    background: url(../../assets/img/bac.jpg) center center / cover no-repeat ;
+    color: white;
+    padding: 30px 15px;
+  }
+  .add-btn{
+    /* background:  rgb(151, 122, 67); */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-bottom: 10%;
+  }
+  h1{
+    color: white;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px black;
+  }
+  .head{
+    background-color: rgb(219, 194, 147);
+  }
+.icon-group {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+}
+.modal-content {
+  border-radius: 10px;
+}
+.modal-body {
+  border-bottom: none !important; 
+}
+.box-part{
+  background:#ebe9e9;
+  border-radius:20px;
+  padding:60px 10px;
+  margin:30px 0px;
+}
+.text{
+  margin:20px 0px;
+}
+
+.icon{
+   /* color:  rgb(151, 122, 67); */
+   color: #0d6efd;
+   font-size: 35px;
+   padding-bottom:10% ;
+}
+.btn1{
+  background-color: #ffffff;
+  border: none;
+  border-radius:5px ;
+  width: 60px;
+  height: 30px;
+}
+.modal-title{
+  font-size: 20px;
+  font-weight: bold;
+
+}

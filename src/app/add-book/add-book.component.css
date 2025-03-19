@@ -1,0 +1,22 @@
+.container{
+    /* background-color: aqua; */
+    margin: auto;
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-shadow: 2px 2px 2px rgb(128, 111, 99);
+  }
+.btn{
+    /* background: linear-gradient(to right, black, rgb(151, 122, 67)); */
+    color: black;
+    width: 100px;
+    border: none;
+    
+}
+.f{
+    padding: 10px;
+}
+
+

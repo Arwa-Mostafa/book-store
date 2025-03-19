@@ -1,0 +1,61 @@
+<div class="container">
+  <h1 class="text-center my-4">Edit Book</h1>
+
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <img src="../../assets/img/bac.jpg" alt="Book Cover" class="img-fluid w-75 shadow rounded">
+    </div>
+
+    <div class="col-md-6">
+      <div *ngIf="loading" class="loading-indicator text-center w-100">Loading book information...</div>
+      <div *ngIf="!loading" class="w-100">
+        <form #bookForm="ngForm" (ngSubmit)="updateBook()" class="p-4 shadow rounded bg-white">
+          
+          <div class="form-group mb-3">
+            <label for="title">Book title</label>
+            <input type="text" id="title" class="form-control"
+                   [(ngModel)]="book.title" name="title" required
+                   #title="ngModel"
+                   [ngClass]="{'is-invalid': title.invalid && title.touched}">
+            <div class="invalid-feedback" *ngIf="title.invalid && title.touched">
+              Title is required.
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="author">Author name</label>
+            <input type="text" id="author" class="form-control"
+                   [(ngModel)]="book.author" name="author" required
+                   #author="ngModel"
+                   [ngClass]="{'is-invalid': author.invalid && author.touched}">
+            <div class="invalid-feedback" *ngIf="author.invalid && author.touched">
+              Author is required.
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" class="form-control"
+                   [(ngModel)]="book.genre" name="genre" required
+                   #genre="ngModel"
+                   [ngClass]="{'is-invalid': genre.invalid && genre.touched}">
+            <div class="invalid-feedback" *ngIf="genre.invalid && genre.touched">
+              Genre is required.
+            </div>
+          </div>
+
+   
+          <div *ngIf="successMessage" class="alert alert-success text-center">
+            {{ successMessage }}
+          </div>
+
+          <button type="submit" class="btn w-50 btn-primary d-block mx-auto" >
+            Save Changes
+          </button>
+        </form>
+
+        <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+      </div>
+    </div>
+  </div>
+</div>
